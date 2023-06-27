@@ -13,6 +13,11 @@ function Shoe({ item }) {
         </p>
         <h2>{title}</h2>
       </div>
+
+      <div className={styles.productItemOverlay}>
+        <h2>$ {price}</h2>
+        <button>Comprar</button>
+      </div>
     </div>
   )
 }
