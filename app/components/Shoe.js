@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import DetailDialog from "./DetailDialog"
 
 function Shoe({ item }) {
-  const { id, title, brand, price, thumbnail, images } = item
+  const { title, brand, price, thumbnail } = item
 
   const { user, redeemItem } = useUserContext()
   const [canBuy, setCanBuy] = useState(true)
@@ -13,7 +13,6 @@ function Shoe({ item }) {
 
   useEffect(() => {
     setCanBuy(user.money - price > 0)
-    console.log(user)
   }, [user])
 
   const handleClick = () => {
