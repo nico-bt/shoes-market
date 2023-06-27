@@ -5,7 +5,7 @@ function ImgCarousel({ images }) {
   return (
     <Carousel
       sx={{ width: "100%", padding: 0, margin: 0 }}
-      navButtonsAlwaysVisible={true}
+      //   navButtonsAlwaysVisible={true}
       indicators={true}
     >
       {images.map((item, i) => (
