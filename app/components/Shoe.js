@@ -27,7 +27,7 @@ function Shoe({ item }) {
         <img src={thumbnail} className={styles.productImg} alt={title} />
         <div className={styles.description}>
           <p>
-            {brand} <span>$ {price}</span>
+            {brand} <span>$ {price.toLocaleString()}</span>
           </p>
           <h2>{title}</h2>
         </div>
@@ -46,11 +46,13 @@ function Shoe({ item }) {
             <div className={styles.moreMoney}>
               Te faltan ${Math.abs(user.money - price).toLocaleString()}
             </div>
-            <button style={{ border: "1px solid gray" }}>Ver</button>
+            <button style={{ border: "1px solid gray" }} onClick={handleClick}>
+              Ver
+            </button>
           </div>
         )}
 
-        <DetailDialog open={openDialog} setOpen={setOpenDialog} item={item} />
+        <DetailDialog open={openDialog} setOpen={setOpenDialog} item={item} canBuy={canBuy} />
       </div>
     </>
   )
