@@ -8,7 +8,6 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <div className={styles.description}>
-          <h1>Shoe Market</h1>
           <Products />
         </div>
       </main>
