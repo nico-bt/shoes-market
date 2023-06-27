@@ -1,0 +1,133 @@
+.productItem {
+  position: relative;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 24px;
+}
+
+.productImg {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  border-top: 1px solid #d9d9d9;
+  width: 100%;
+  padding: 12px 0;
+}
+.description h2 {
+  font-size: 18px;
+  color: #616161;
+  letter-spacing: -0.04px;
+  text-align: left;
+}
+.description p {
+  font-size: 16px;
+  color: #a3a3a3;
+  letter-spacing: -0.04px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.description span {
+  display: flex;
+  align-items: flex-end;
+}
+.description > * {
+  margin: 0;
+}
+
+.iconBuy {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.moreCoins {
+  background: #616161;
+  border-radius: 100px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: -0.03px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 10;
+}
+.productItemOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.productItemOverlay:hover {
+  cursor: pointer;
+  opacity: 1;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(10, 212, 250, 0.75) 0%,
+    rgba(37, 187, 241, 0.75) 100%
+  );
+}
+
+.productItemOverlay h2 {
+  font-size: 36px;
+  color: #ffffff;
+  letter-spacing: -0.08px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+}
+.productItemOverlay button {
+  background: #ffffff;
+  width: 228px;
+  height: 42px;
+  font-size: 18px;
+  color: #616161;
+  letter-spacing: -0.04px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.productItemOverlay button:hover {
+  background-color: black;
+  color: white;
+}
+
+.productItemOverlayNeedMoreCoins {
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.productItem:hover {
+  animation: hoverBtn 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hoverBtn {
+  from {
+  }
+  to {
+    transform: scale(106%);
+    box-shadow: 12px 12px 18px black;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "01",
+      "title": "Ace Sneakers",
+      "brand": "Gucci",
+      "price": 780,
+      "thumbnail": "/img/01_thumb.avif",
+      "images": ["/img/01_thumb.avif", "/img/01_01.avif", "/img/01_02.avif", "/img/01_03.avif"]
+    },
+    {
+      "id": "02",
+      "title": "Oran Sandals",
+      "brand": "Hermès",
+      "price": 700,
+      "thumbnail": "/img/02_01.jpg",
+      "images": ["/img/02_02.jpg", "/img/02_03.jpg", "/img/02_04.jpg"]
+    },
+    {
+      "id": "03",
+      "title": "Ace Sneakers",
+      "brand": "Gucci",
+      "price": 780,
+      "thumbnail": "/img/01_thumb.avif",
+      "images": ["/img/01_thumb.avif", "/img/01_01.avif", "/img/01_02.avif", "/img/01_03.avif"]
+    },
+    {
+      "id": "04",
+      "title": "Oran Sandals",
+      "brand": "Hermès",
+      "price": 700,
+      "thumbnail": "/img/02_01.jpg",
+      "images": ["/img/02_02.jpg", "/img/02_03.jpg", "/img/02_04.jpg"]
+    }
+  ]
+}
