@@ -15,14 +15,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         isLoading: true,
-        error: false,
-        isTransactionOk: false,
       }
     case "REGISTER_USER_SUCCESS":
       return {
         ...state,
         isLoading: false,
-        error: false,
         user: action.payload.user,
         isFirstLoad: action.payload.isFirstLoad,
       }
@@ -31,16 +28,14 @@ const reducer = (state, action) => {
       return {
         ...state,
         isLoading: true,
-        isTransactionOk: false,
-        error: false,
       }
+
     case "REDEEM_ITEM_CANCEL":
       return {
         ...state,
         isLoading: false,
-        isTransactionOk: false,
-        error: false,
       }
+
     case "REDEEM_ITEM_SUCCESS":
       if (state.user.money - action.payload.product.price < 0) {
         // Sin suficiente dinero en cuenta
@@ -49,8 +44,6 @@ const reducer = (state, action) => {
       const newState = {
         ...state,
         isLoading: false,
-        isTransactionOk: true,
-        error: false,
         user: {
           ...state.user,
           money: state.user.money - action.payload.product.price,
@@ -69,12 +62,11 @@ const reducer = (state, action) => {
 // ***********************************************************
 // LOCAL VERSION:
 const INITIAL_USER = {
-  money: 10000,
+  money: 6000,
   cart: [],
 }
 
 const initialState = {
-  isTransactionOk: false,
   user: INITIAL_USER,
   isFirstLoad: false,
 }
