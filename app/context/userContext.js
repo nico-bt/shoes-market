@@ -88,7 +88,7 @@ const UserProvider = ({ children }) => {
 
   // GET User data
   //-------------------------------------------------------------------------
-  const getUser = async () => {
+  const getUser = () => {
     const userInLocal = localStorage.getItem("user")
 
     if (userInLocal) {
@@ -110,7 +110,7 @@ const UserProvider = ({ children }) => {
 
   // REDEEM ITEM
   //-------------------------------------------------------------------------
-  const redeemItem = async (product) => {
+  const redeemItem = (product) => {
     dispatch({ type: "REDEEM_ITEM_BEGIN" })
 
     dispatch({ type: "REDEEM_ITEM_SUCCESS", payload: { product } })
